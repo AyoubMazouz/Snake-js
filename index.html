@@ -5,33 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Snake</title>
-    <script defer src="snake.config.js"></script>
-    <script defer src="snake.js"></script>
+    <script defer src="./src/js/snake.config.js"></script>
+    <script defer src="./src/js/snake.js"></script>
+    <link rel="stylesheet" href="./src/css/styles.css">
 </head>
 
-<body style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+<body class="font-montserrat font-medium text-gray-900 bg-zinc-200">
 
-    <canvas id="snake" style="background: black;"></canvas>
+    <div class="flex justify-center items-center h-full">
 
-    <div>
-        <h3>
-            Score:
-            <span id="score">0</span>
-        </h3>
-        <h3>
-            Hight Score:
-            <span id="hight-score">0</span>
-        </h3>
-        <h3>
-            Speed:
-            <span id="speed"></span>
-        </h3>
-        <input type="range" id="slider" min="60" max="180" step="30" value="120">
         <div>
-            <button id="reset">Reset</button>
-            <button id="pause">Pause</button>
+
+            <h1 class="text-emerald-700 text-3xl font-semibold mb-12">
+                Classic Snake.
+            </h1>
+            <div class="flex justify-between items-center mb-2">
+                <h3 class="">
+                    Score:
+                    <span id="score" class="text-emerald-800 font-semibold">
+                        0
+                    </span>
+                </h3>
+                <h3>
+                    Hight Score:
+                    <span id="hight-score" class="text-emerald-800 font-semibold">
+                        0
+                    </span>
+                </h3>
+                <div>
+                    <button id="reset"
+                        class="font-medium bg-red-500 py-1 px-2 rounded hover:bg-red-700 transition-colors duration-300">
+                        Reset
+                    </button>
+                    <button id="pause"
+                        class="font-medium bg-emerald-500 py-1 px-2 rounded hover:bg-emerald-700 transition-colors duration-300">
+                        Pause
+                    </button>
+                </div>
+                <div class="flex items-center">
+                    Speed:
+                    <span id="speed" class="text-emerald-800 font-semibold">
+                    </span>
+                    <input type="range" id="slider" min="60" max="180" step="30" value="120" class="w-24">
+                </div>
+            </div>
+
+            <canvas id="snake"></canvas>
+
+            <div class="mt-6">
+                <h1 class="text-2xl text-emerald-700">Controls: </h1>
+                <ul class="list-disc">
+                    <li>
+                        <span class="text-emerald-800 font-semibold">
+                            "A", "W", "S", "D"</span>
+                        or
+                        <span class="text-emerald-800 font-semibold">
+                            "Arrow Left", "Up", "Down", "Right"</span> to move.
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
+
 </body>
 
 </html>
