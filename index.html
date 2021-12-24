@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <script defer src="snake.config.js"></script>
+    <script defer src="snake.js"></script>
+</head>
+
+<body style="display: flex; justify-content: center; align-items: center; gap: 10px;">
+
+    <canvas id="snake" style="background: black;"></canvas>
+
+    <div>
+        <h3>
+            Score:
+            <span id="score">0</span>
+        </h3>
+        <h3>
+            Hight Score:
+            <span id="hight-score">0</span>
+        </h3>
+        <h3>
+            Speed:
+            <span id="speed"></span>
+        </h3>
+        <input type="range" id="slider" min="60" max="180" step="30" value="120">
+        <div>
+            <button id="reset">Reset</button>
+            <button id="pause">Pause</button>
+        </div>
+    </div>
+</body>
+
+</html>
