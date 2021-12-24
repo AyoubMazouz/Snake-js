@@ -196,10 +196,16 @@ const update = () => {
 pauseBtn.addEventListener("click", () => pause(gameLoop));
 restartBtn.addEventListener("click", () => reset(gameLoop));
 document.addEventListener("keydown", (event) => {
+    // Arrow Left, Up, Down, right.
     if (event.keyCode === 37) player.turn(dir.left);
-    else if (event.keyCode === 39) player.turn(dir.right);
-    else if (event.keyCode === 40) player.turn(dir.down);
     else if (event.keyCode === 38) player.turn(dir.up);
+    else if (event.keyCode === 40) player.turn(dir.down);
+    else if (event.keyCode === 39) player.turn(dir.right);
+    // A W S D
+    else if (event.keyCode === 67) player.turn(dir.left);
+    else if (event.keyCode === 87) player.turn(dir.up);
+    else if (event.keyCode === 83) player.turn(dir.down);
+    else if (event.keyCode === 68) player.turn(dir.right);
 })
 
 const init = () => {
