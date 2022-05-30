@@ -76,9 +76,10 @@ const collision = () => {
 const reset = loop => {
     stopGameLoop(loop);
     updateHightScore();
+    player.isPaused = false
     player.score = 0;
     player.body = [new Vector2D(10, 10), new Vector2D(11, 10)];
-    player.speed = speedSlider.value;
+    player.speed = speedSlider.value | 0;
     food.newFood();
     updateSpeedLabel();
     updateScoreLabel();
@@ -88,12 +89,17 @@ const reset = loop => {
 
 const pause = loop => {
     if (player.isPaused) {
-        startGameLoop(update, player.speed);
+        speedSlider.disabled = true;
+        player.speed = speedSlider.value | 0;
         player.isPaused = false;
-    } else {
+        startGameLoop(update, player.speed);
+    } 
+    else {
         stopGameLoop(loop);
         player.isPaused = true;
+        speedSlider.disabled = false;
     }
+    updateSpeedLabel();
 }
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -152,13 +158,11 @@ const dir = {
 const player = {
     score: 0,
     hightScore: 0,
-    speed: speedSlider.value,
+    speed: speedSlider.value | 0,
     dir: new Vector2D(-1, 0),
     body: [
         new Vector2D(10, 10),
         new Vector2D(11, 10),
-        new Vector2D(12, 10),
-        new Vector2D(13, 10)
     ],
 
     grow(dir = this.dir) {
@@ -211,5 +215,4 @@ document.addEventListener("keydown", (event) => {
 const init = () => {
     gameLoop = setInterval(update, player.speed);
     updateSpeedLabel();
-    initHighScore();
 }; init()

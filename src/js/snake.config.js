@@ -5,15 +5,15 @@ const gameSize = {
     height: gridSize.y * blockSize,
 };
 const speedString = {
-    60: 'very fast',
-    90: 'fast',
+    40: 'very fast',
+    80: 'fast',
     120: 'normal',
-    150: 'slow',
-    180: 'very slow',
-}
+    160: 'slow',
+    200: 'very slow',
+};
 colors = {
-    snake: '#8bac0f',
-    apple: '#9bbc0f',
-    bgLight: '#0f380f',
-    bgDark: '#306230'
-}
+    snake: '#C2DED1',
+    apple: '#D61C4E',
+    bgLight: '#5B4B8A',
+    bgDark: '#4C3575'
+};
