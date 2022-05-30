@@ -7,5 +7,6 @@ HighScore is stored in local storage.
 
 ## Screen Shots:
 
+![](./public/screenshots/01.gif)
 ![](./public/screenshots/01.png)
 ![](./public/screenshots/02.png)
