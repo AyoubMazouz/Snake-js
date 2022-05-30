@@ -1,6 +1,7 @@
 # Classic Snake game clone:
 
-Made with Vanilla JavaScript using the Canvas API, HighScore is stored in local storage.
+Made with Vanilla JavaScript using the Canvas API, you can adjust speed, pause or reset. 
+HighScore is stored in local storage.
 
 ### [Live Demo: here]()
 
